@@ -2,6 +2,8 @@ body{
 	margin: 0;
 }
 .icon{
+	top: 100px;
+	left: 100px;
 	display: flex;
 	background: transparent;
 	/*border: 1px dotted black;*/
