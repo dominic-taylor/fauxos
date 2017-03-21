@@ -1,52 +1,40 @@
-// var icons = document.getElementsByClassName('icon')
-// for (var i = 0; i < icons.length; i++) {
-// 	icons[i].addEventListener('onmousedown', function (e) {
-// 		test(event)
-// 	}, false)
-// }
+document.onmousemove = moveEl;
+document.onmouseup = dropEl;
 
-// document.addEventListener('mousedown', function (e) {
+var icons = document.getElementsByClassName('icon')
 
-// 	test(event)
-// 	// e.preventDefault();
-// }, false)
+var selected = null, // Object of the element to be moved
+    mouseX = 0, mouseY = 0, // Stores x & y coordinates of the mouse pointer
+    elemX = 0, elemY = 0; 
 
-// function test(e) {
-// 	console.log(e.target)
-// 	// if(e.target.className == 'icon') {
-// 	// e.pageX
-// 	// e.pageY
-// 	    document.addEventListener ("mousedown" , dragIcon , false);
+for (var i = 0; i < icons.length; i++) {
+  icons[i].onmousedown = function () {
+    grabEl(this);
+    return false;
+  };
+  icons[i].addEventListener('dblclick',function(e){
+    console.log("open folder");
+  });
 
-// 	console.log('you clicked alright')
-// 	console.log(e.target.style.left)
-
-// 	//while mouseDown get mouse x and y
-//  // }else{
-//  // 	return
-//  // }
-// 	//set e.left and e/top to mouse x y
-	
-// }
-// function dragIcon(e) {
-// 	e.target.style.left = e.pageX+'px';
-// 	e.target.style.top = e.pageY+'px';
-
-document.getElementById('ball2').addEventListener('onmousedown', function() {
-  this.style.position = 'absolute'
-
-  var self = this
-
-  document.onmousemove = function(e) {
-    e = e || event
-    fixPageXY(e) 
-   
-    self.style.left = e.pageX-25+'px' 
-    self.style.top = e.pageY-25+'px' 
-  }
-  this.onmouseup = function() {
-    document.onmousemove = null
-  }
 }
 
-document.getElementById('ball2').ondragstart = function() { return false }
+function grabEl(elem) {
+    selected = elem;
+    elemX = mouseX - selected.offsetLeft;
+    elemY = mouseY - selected.offsetTop;
+}
+
+function moveEl(e) {
+    mouseX = document.all ? window.event.clientX : e.pageX;
+    mouseY = document.all ? window.event.clientY : e.pageY;
+    if (selected !== null) {
+        selected.style.left = (mouseX - elemX) + 'px';
+        selected.style.top = (mouseY - elemY) + 'px';
+    }
+}
+
+function dropEl() {
+    mouseX = null;
+    mouseY = null;
+    selected = null;
+}
