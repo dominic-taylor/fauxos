@@ -1,0 +1,77 @@
+body{
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	/*font-family: Tahoma, Geneva, sans-serif;	*/
+}
+.icon{
+	top: 100px;
+	left: 100px;
+	display: flex;
+	background: transparent;
+	width: 60px;
+	height: auto;
+	position: absolute;
+	
+}
+.tab{
+	background-color: violet;
+	height: 45px;
+	width: 50%;
+	border-top: 5px solid violet;
+}
+.foldergap{
+	background-color: violet;
+	height: 45px;
+	width: 50%;
+	border-top: 5px solid white;
+	border-bottom-right-radius: 0.5em;
+
+}
+.foldertitle{
+	position: absolute;
+	margin-top: 2.5em;
+}
+.file{
+	background: red;
+}
+#desktop{
+	height: 1024px;
+	background: lightgreen;
+}
+#bar{
+	width: 100%; 
+	height: 20px;
+	background: cornflowerblue;
+}
+#start{
+	text-align: center;
+	list-style: none;
+	position: absolute;
+	background: salmon;
+	width: 120px; 
+	height: 20px;
+	overflow: hidden;
+}
+#start:hover {
+	height: 190px;
+	z-index: 2;
+}
+#start li {
+	text-align: left;
+	padding: 8px;
+}
+#start li:hover{
+	background-color: pink;
+}
+
+/*Feeling a bit lost.
+Post hackathon, I feel like I need to learn C# but it is not as easy to get started on as node/js. 
+I’m struggling to apply for jobs. 
+I am not feeling motivated/no energy for it anymore. 
+
+
+
+At my next hackathon I will;
+Join a project I am most interested in.
+Make my skills known by being obvious and clear.
+Make sure the majority of the team can contribute by using a solution we are all familiar with, especially if it is going to cause a bottleneck i.e one person knows Angular2. */
