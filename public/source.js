@@ -1,6 +1,6 @@
 document.onmousemove = moveEl;
 document.onmouseup = dropEl;
-change
+
 var icons = document.getElementsByClassName('icon')
 //fffr
 var selected = null, // Object of the element to be moved
