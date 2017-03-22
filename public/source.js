@@ -2,7 +2,7 @@ document.onmousemove = moveEl;
 document.onmouseup = dropEl;
 
 var icons = document.getElementsByClassName('icon')
-//fffr
+
 var selected = null, // Object of the element to be moved
     mouseX = 0, mouseY = 0, // Stores x & y coordinates of the mouse pointer
     elemX = 0, elemY = 0; 

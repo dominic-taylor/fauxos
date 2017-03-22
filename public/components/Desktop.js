@@ -4,11 +4,11 @@ import Icons from './Icons';
 
 export default class Desktop extends React.Component {
   render() {
-    return	(<div>
+    return	(
     		<div id="desktop">
     			<MenuBar />
     			<Icons />
 			</div>
-			</div>)	
+			)	
   }
 };

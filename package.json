@@ -4,8 +4,8 @@
   "description": "my web site",
   "main": "source.js",
   "scripts": {
-    "build": "browserify source.js -t [ babelify --presets [ es2015 react ] ] --outfile bundle.js",
-    "watch": "watchify source.js --o bundle.js -t [ babelify --presets [ es2015 react ] ] -dv",
+    "build": "browserify public/app.js -t [ babelify --presets [ es2015 react ] ] --outfile public/bundle.js",
+    "watch": "watchify public/app.js --o public/bundle.js -t [ babelify --presets [ es2015 react ] ] -dv",
     "test": "test"
   },
   "repository": {
