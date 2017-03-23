@@ -31,8 +31,11 @@ body{
 	position: absolute;
 	margin-top: 2.5em;
 }
-.file{
-	background: red;
+.panel{
+	height: 300px;
+	width: 500px;
+	border: 4px solid #FFF000;
+	background: #FFFFFF;
 }
 #desktop{
 	height: 1024px;
@@ -45,18 +48,22 @@ body{
 }
 #start{
 	text-align: center;
-	list-style: none;
 	position: absolute;
 	background: salmon;
 	width: 120px; 
 	height: 20px;
 	overflow: hidden;
 }
+ul {
+	padding: 0;
+}
+
 #start:hover {
-	height: 190px;
+	height: auto;
 	z-index: 2;
 }
 #start li {
+	list-style: none;
 	text-align: left;
 	padding: 8px;
 }
